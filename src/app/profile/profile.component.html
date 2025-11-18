@@ -10,4 +10,15 @@
   <p>Role : {{ userProfile.role }}</p>
 </div>
 
+<!-- <input [value]="name" (input)="onNameChange($event)"/> -->
+<br/>
+<br/>
+<br/>
+
+<input [(ngModel)]="userProfile.name" placeholder="Enter name"/>
+<input [(ngModel)]="userProfile.role" placeholder="Enter role"/>
+
+<p>Entered Name : {{userProfile.name}}</p>
+<p>Entered Role : {{userProfile.role}}</p>
+
 
