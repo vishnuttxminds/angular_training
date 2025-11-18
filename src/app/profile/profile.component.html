@@ -1,0 +1,13 @@
+<p>profile works!</p>
+
+<button (click)="activeTrueFalse()">
+  {{ userProfile.active ? 'Deactivate' : 'Activate' }}
+</button>
+
+<div *ngIf="userProfile.active">
+    <img [src]="userProfile.image" class="profile-img">
+  <p>Name : {{ userProfile.name }}</p>
+  <p>Role : {{ userProfile.role }}</p>
+</div>
+
+
