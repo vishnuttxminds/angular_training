@@ -24,10 +24,13 @@ export class ProfileComponent {
     this.userProfile.active = !this.userProfile.active;
   }
 
+
+  // Method for one-way binding example (currently not in use)
   onNameChange(event: any) {
     this.name = event.target.value;
   }
-
+  
+  // Method for one-way binding example (currently not in use)
   updateSearchText(event: any) {
     this.name = event.target.value;
   }
