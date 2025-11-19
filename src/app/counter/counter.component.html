@@ -1,13 +1,11 @@
-<p>counter works!</p>
+<p>counter works!</p> 
 
- 
-
-<button (click)="decreamentCount()">
+<button *ngIf="count > 0" (click)="decreamentCount()">
   {{  '-' }}
 </button>
 
 <p>{{count}}</p>
 
-<button (click)="increamentCount()">
+<button *ngIf="count < 10"  (click)="increamentCount()">
   {{ '+' }}
 </button>
