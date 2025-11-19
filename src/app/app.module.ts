@@ -7,13 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProductListComponent,
-    ProfileComponent
+    ProfileComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
