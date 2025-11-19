@@ -2,24 +2,23 @@
 
 <div *ngFor="let item of products" [ngSwitch]="getPriceCategory(item.price)">
   <p *ngSwitchCase="'AFFO'">
-    {{ item.name }} - Amount: {{ item.price }} (Affordable)
+    <span [ngStyle]="getPriceCategoryStyle(item.price)">
+      {{ item.name }} - Amount: {{ item.price }} (Affordable)
+    </span>
   </p>
 
   <p *ngSwitchCase="'EXPE'">
-    {{ item.name }} - Amount: {{ item.price }} (Expensive)
+    <span [ngStyle]="getPriceCategoryStyle(item.price)">
+      {{ item.name }} - Amount: {{ item.price }} (Expensive)
+    </span>
   </p>
 
   <p *ngSwitchDefault>
-    {{ item.name }} - Amount: {{ item.price }} 
+    <span [ngStyle]="getPriceCategoryStyle(item.price)">
+      {{ item.name }} - Amount: {{ item.price }}
+    </span>
   </p>
-
 </div>
-
-
-
-
-
-
 
 <!-- <ul>
   <li *ngFor="let item of products">

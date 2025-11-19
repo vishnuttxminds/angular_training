@@ -21,4 +21,15 @@ export class CartComponent {
     else if (price > 50000) return 'EXPE';
     else return 'NORM';
   }
+
+  getPriceCategoryStyle(price: number) {
+    if (price < 5000) {
+      return { color: 'green' };
+    } else if (price > 50000) {
+      return { color: 'red' };
+    } else {
+      return { color: 'orange' };
+    }
+  }
+  
 }
