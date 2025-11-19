@@ -11,6 +11,8 @@ import { CounterComponent } from './counter/counter.component';
 import { CartComponent } from './cart/cart.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeViewComponent } from './employee-list/employee-view/employee-view.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ParentComponent } from './parent/parent.component';
     CounterComponent,
     CartComponent,
     ChildComponent,
-    ParentComponent
+    ParentComponent,
+    EmployeeListComponent,
+    EmployeeViewComponent
   ],
   imports: [
     BrowserModule,
