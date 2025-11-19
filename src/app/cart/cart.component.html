@@ -1,6 +1,27 @@
 <p>cart works!</p>
 
-<ul>
+<div *ngFor="let item of products" [ngSwitch]="getPriceCategory(item.price)">
+  <p *ngSwitchCase="'AFFO'">
+    {{ item.name }} - Amount: {{ item.price }} (Affordable)
+  </p>
+
+  <p *ngSwitchCase="'EXPE'">
+    {{ item.name }} - Amount: {{ item.price }} (Expensive)
+  </p>
+
+  <p *ngSwitchDefault>
+    {{ item.name }} - Amount: {{ item.price }} 
+  </p>
+
+</div>
+
+
+
+
+
+
+
+<!-- <ul>
   <li *ngFor="let item of products">
   <p *ngIf="item.price < 5000; else checkExpensiveElseIf">
     {{ item.name }} - Amount: {{ item.price }} (Affordable)
@@ -18,4 +39,4 @@
     </p>
   </ng-template>
   </li>
-</ul>
+</ul> -->

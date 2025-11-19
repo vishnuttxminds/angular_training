@@ -16,5 +16,9 @@ export class CartComponent {
     { id: 4, name: 'Keyboard', price: 1200 },
   ];
 
-  
+  getPriceCategory(price: number): string {
+    if (price < 5000) return 'AFFO';
+    else if (price > 50000) return 'EXPE';
+    else return 'NORM';
+  }
 }
