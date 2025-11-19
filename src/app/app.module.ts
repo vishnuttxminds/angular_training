@@ -9,6 +9,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { CounterComponent } from './counter/counter.component';
 import { CartComponent } from './cart/cart.component';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { CartComponent } from './cart/cart.component';
     ProductListComponent,
     ProfileComponent,
     CounterComponent,
-    CartComponent
+    CartComponent,
+    ChildComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,
