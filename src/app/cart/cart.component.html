@@ -1,8 +1,21 @@
 <p>cart works!</p>
 
-
 <ul>
   <li *ngFor="let item of products">
-    {{ item.name }} - Amount :{{ item.price }}
+  <p *ngIf="item.price < 5000; else checkExpensiveElseIf">
+    {{ item.name }} - Amount: {{ item.price }} (Affordable)
+  </p>
+
+   <ng-template #checkExpensiveElseIf>
+    <p *ngIf="item.price > 50000; else checkElse">
+      {{ item.name }} - Amount: {{ item.price }} (Expensive)
+    </p>
+  </ng-template>
+
+   <ng-template #checkElse>
+    <p>
+      {{ item.name }} - Amount: {{ item.price }}
+    </p>
+  </ng-template>
   </li>
 </ul>
