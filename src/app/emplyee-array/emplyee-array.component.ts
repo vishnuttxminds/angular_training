@@ -7,7 +7,7 @@ import { Employee } from '../models/employee.model';
   styleUrls: ['./emplyee-array.component.css'],
 })
 export class EmplyeeArrayComponent {
-  employees: Employee[] = [
+  employ: Employee[] = [
     { id: 1, name: 'John', role: 'Manager', salary: 10000 },
     { id: 2, name: 'Sara', role: 'Developer', salary: 15000 },
     { id: 3, name: 'Ravi', role: 'Designer', salary: 220000 },

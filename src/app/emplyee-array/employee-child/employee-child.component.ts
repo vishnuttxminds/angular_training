@@ -16,8 +16,6 @@ export class EmployeeChildComponent implements OnInit {
 
   ngOnInit(): void {
     this.filteredEmployees = this.employees;
-
-
   }
 
   onSearch() {
