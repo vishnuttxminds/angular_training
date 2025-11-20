@@ -1,6 +1,11 @@
-
 <h3>Employee List</h3>
+<p>Message 1>> {{ childMessage }}</p>
 
+<p>Message 2>> {{ childMessage2 }}</p>
 <div *ngFor="let emp of employees">
-  <app-employee-view [employee]="emp"></app-employee-view>
+  <app-employee-view
+    [employee]="emp"
+    (messageEvent)="receiveMessage($event)"
+    (messageEvent2)="receiveMessage2($event)"
+  ></app-employee-view>
 </div>
