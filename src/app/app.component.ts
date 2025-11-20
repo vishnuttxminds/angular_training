@@ -14,4 +14,8 @@ export class AppComponent  {
   callChildMethod() {
     this.child.sayHello();
   }
+
+onParentButtonClick() {
+  this.child.highlightRed();
+}
 }
