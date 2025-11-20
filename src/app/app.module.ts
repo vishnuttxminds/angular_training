@@ -13,6 +13,8 @@ import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeViewComponent } from './employee-list/employee-view/employee-view.component';
+import { EmplyeeArrayComponent } from './emplyee-array/emplyee-array.component';
+import { EmployeeChildComponent } from './emplyee-array/employee-child/employee-child.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { EmployeeViewComponent } from './employee-list/employee-view/employee-vi
     ChildComponent,
     ParentComponent,
     EmployeeListComponent,
-    EmployeeViewComponent
+    EmployeeViewComponent,
+    EmplyeeArrayComponent,
+    EmployeeChildComponent
   ],
   imports: [
     BrowserModule,

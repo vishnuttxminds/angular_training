@@ -1,0 +1,22 @@
+<div>
+  <p *ngFor="let emp of employees">Name: {{ emp.name }}</p>
+  <p>==============================</p>
+</div>
+
+<div>
+  <input
+    type="text"
+    placeholder="Search by name"
+    [(ngModel)]="searchText"
+    (keyup.enter)="onSearch()"
+  />
+  <button (click)="onSearch()">Search</button>
+</div>
+
+<div *ngIf="isSearched">
+  <div *ngIf="filteredEmployees.length > 0">
+    <div *ngFor="let emp of filteredEmployees" class="emp-card">
+      <h3>{{ emp.name }}</h3>
+    </div>
+  </div>
+</div>

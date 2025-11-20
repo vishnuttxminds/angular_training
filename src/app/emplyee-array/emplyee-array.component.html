@@ -1,0 +1,14 @@
+<p>emplyee-array works!</p>
+
+<app-employee-child 
+[employees]="employees"
+(searchResult)="handleSearch($event)"></app-employee-child>
+
+
+<div *ngIf="parentSearchResult.length > 0">
+  <h2>Parent Received Employees:</h2>
+
+  <div *ngFor="let emp of parentSearchResult">
+    <p>{{ emp.name }}</p>
+  </div>
+</div>
