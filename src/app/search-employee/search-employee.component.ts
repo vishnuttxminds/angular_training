@@ -33,10 +33,4 @@ export class SearchEmployeeComponent {
       emp.name.toLowerCase().includes(text)
     );
   }
-
-  ngAfterViewInit() {
-    this.searchButton.nativeElement.addEventListener('click', () => {
-      this.onSearch();
-    });
-  }
 }
