@@ -16,6 +16,7 @@ import { EmployeeViewComponent } from './employee-list/employee-view/employee-vi
 import { EmplyeeArrayComponent } from './emplyee-array/emplyee-array.component';
 import { EmployeeChildComponent } from './emplyee-array/employee-child/employee-child.component';
 import { ButtonChildComponent } from './button-child/button-child.component';
+import { SearchEmployeeComponent } from './search-employee/search-employee.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ButtonChildComponent } from './button-child/button-child.component';
     EmployeeViewComponent,
     EmplyeeArrayComponent,
     EmployeeChildComponent,
-    ButtonChildComponent
+    ButtonChildComponent,
+    SearchEmployeeComponent
   ],
   imports: [
     BrowserModule,
