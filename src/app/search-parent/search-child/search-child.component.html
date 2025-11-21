@@ -1,0 +1,19 @@
+<p>search-child works!</p>
+
+
+<div>
+  <input
+    #searchInput
+    type="text"
+    placeholder="Search by name"
+  />
+  <button (click)="onSearch()">Search</button>
+</div>
+
+<div *ngIf="isSearched">
+  <div *ngIf="filteredEmployees.length > 0">
+    <div *ngFor="let emp of filteredEmployees">
+      <h3>{{ emp.name }}</h3>
+    </div>
+  </div>
+</div>

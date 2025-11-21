@@ -17,6 +17,8 @@ import { EmplyeeArrayComponent } from './emplyee-array/emplyee-array.component';
 import { EmployeeChildComponent } from './emplyee-array/employee-child/employee-child.component';
 import { ButtonChildComponent } from './button-child/button-child.component';
 import { SearchEmployeeComponent } from './search-employee/search-employee.component';
+import { SearchParentComponent } from './search-parent/search-parent.component';
+import { SearchChildComponent } from './search-parent/search-child/search-child.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { SearchEmployeeComponent } from './search-employee/search-employee.compo
     EmplyeeArrayComponent,
     EmployeeChildComponent,
     ButtonChildComponent,
-    SearchEmployeeComponent
+    SearchEmployeeComponent,
+    SearchParentComponent,
+    SearchChildComponent
   ],
   imports: [
     BrowserModule,
