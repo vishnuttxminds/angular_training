@@ -19,6 +19,8 @@ import { ButtonChildComponent } from './button-child/button-child.component';
 import { SearchEmployeeComponent } from './search-employee/search-employee.component';
 import { SearchParentComponent } from './search-parent/search-parent.component';
 import { SearchChildComponent } from './search-parent/search-child/search-child.component';
+import { ViewChildrenParentComponent } from './view-children-parent/view-children-parent.component';
+import { ViewChildrenChildComponent } from './view-children-parent/view-children-child/view-children-child.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { SearchChildComponent } from './search-parent/search-child/search-child.
     ButtonChildComponent,
     SearchEmployeeComponent,
     SearchParentComponent,
-    SearchChildComponent
+    SearchChildComponent,
+    ViewChildrenParentComponent,
+    ViewChildrenChildComponent
   ],
   imports: [
     BrowserModule,
