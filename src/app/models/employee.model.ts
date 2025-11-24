@@ -4,3 +4,10 @@ export interface Employee {
   role: string;
   salary: number;
 }
+
+
+export interface Books {
+  id: number;
+  name: string;
+}
+

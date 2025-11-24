@@ -1,0 +1,12 @@
+<p>book-serach works!</p>
+
+
+<input
+  #searchBox
+  type="text"
+  placeholder="Search Books..."
+  [(ngModel)]="searchText"
+  (input)="onSearch()"
+/>
+
+<app-book-list [books]="filteredBooks"></app-book-list>

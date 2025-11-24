@@ -25,6 +25,8 @@ import { NgItemsComponent } from './ng-items/ng-items.component';
 import { NgItemsChildComponent } from './ng-items/ng-items-child/ng-items-child.component';
 import { ViewChildrenParent1Component } from './view-children-parent1/view-children-parent1.component';
 import { ViewChildrenChild1Component } from './view-children-parent1/view-children-child1/view-children-child1.component';
+import { BookSerachComponent } from './book-serach/book-serach.component';
+import { BookListComponent } from './book-serach/book-list/book-list.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { ViewChildrenChild1Component } from './view-children-parent1/view-childr
     NgItemsComponent,
     NgItemsChildComponent,
     ViewChildrenParent1Component,
-    ViewChildrenChild1Component
+    ViewChildrenChild1Component,
+    BookSerachComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
