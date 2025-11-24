@@ -21,6 +21,10 @@ import { SearchParentComponent } from './search-parent/search-parent.component';
 import { SearchChildComponent } from './search-parent/search-child/search-child.component';
 import { ViewChildrenParentComponent } from './view-children-parent/view-children-parent.component';
 import { ViewChildrenChildComponent } from './view-children-parent/view-children-child/view-children-child.component';
+import { NgItemsComponent } from './ng-items/ng-items.component';
+import { NgItemsChildComponent } from './ng-items/ng-items-child/ng-items-child.component';
+import { ViewChildrenParent1Component } from './view-children-parent1/view-children-parent1.component';
+import { ViewChildrenChild1Component } from './view-children-parent1/view-children-child1/view-children-child1.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { ViewChildrenChildComponent } from './view-children-parent/view-children
     SearchParentComponent,
     SearchChildComponent,
     ViewChildrenParentComponent,
-    ViewChildrenChildComponent
+    ViewChildrenChildComponent,
+    NgItemsComponent,
+    NgItemsChildComponent,
+    ViewChildrenParent1Component,
+    ViewChildrenChild1Component
   ],
   imports: [
     BrowserModule,

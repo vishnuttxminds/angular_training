@@ -1,0 +1,16 @@
+<p>view-children-parent1 works!</p>
+
+<div class="search-container">
+  <input 
+    type="text"
+    placeholder="Search employee name"
+    [(ngModel)]="searchText"
+    (input)="onSearch()"
+  />
+</div>
+
+<ul>
+  <li *ngFor="let emp of employees">
+    <span #empName>{{ emp.name }}</span>
+  </li>
+</ul>

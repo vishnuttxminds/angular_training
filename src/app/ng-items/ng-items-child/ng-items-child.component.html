@@ -1,0 +1,16 @@
+<p>ng-items-child works!</p>
+
+<div>
+  <ng-content> 
+    
+  </ng-content>
+</div>
+
+<ng-container *ngIf="isActive">
+  <p>Employee is active</p>
+</ng-container>
+
+<ng-container *ngFor="let emp of employees">
+  <li>{{ emp.name }}</li>
+</ng-container>
+
