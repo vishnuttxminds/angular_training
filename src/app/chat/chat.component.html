@@ -1,0 +1,12 @@
+<p>chat works!</p>
+
+<div 
+  #chatContainer 
+  style="height: 200px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;"
+>
+  <div *ngFor="let msg of messages">
+    {{ msg }}
+  </div>
+</div>
+
+<button (click)="sendMessage()">Send Message</button>
