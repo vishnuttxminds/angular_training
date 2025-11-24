@@ -28,6 +28,7 @@ import { ViewChildrenChild1Component } from './view-children-parent1/view-childr
 import { BookSerachComponent } from './book-serach/book-serach.component';
 import { BookListComponent } from './book-serach/book-list/book-list.component';
 import { ChatComponent } from './chat/chat.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ChatComponent } from './chat/chat.component';
     ViewChildrenChild1Component,
     BookSerachComponent,
     BookListComponent,
-    ChatComponent
+    ChatComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
