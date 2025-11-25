@@ -29,6 +29,10 @@ import { BookSerachComponent } from './book-serach/book-serach.component';
 import { BookListComponent } from './book-serach/book-list/book-list.component';
 import { ChatComponent } from './chat/chat.component';
 import { ProductComponent } from './product/product.component';
+import { SetBackgoundDirective } from './CustomDirective/set-backgound.directive';
+import { HighlightsDirective } from './CustomDirective/highlights.directive';
+import { AppHoverDirective } from './CustomDirective/app-hover.directive';
+import { BgColorDirective } from './CustomDirective/bg-color.directive';
 
 @NgModule({
   declarations: [
@@ -57,7 +61,11 @@ import { ProductComponent } from './product/product.component';
     BookSerachComponent,
     BookListComponent,
     ChatComponent,
-    ProductComponent
+    ProductComponent,
+    SetBackgoundDirective,
+    HighlightsDirective,
+    AppHoverDirective,
+    BgColorDirective
   ],
   imports: [
     BrowserModule,
