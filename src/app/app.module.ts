@@ -33,6 +33,7 @@ import { SetBackgoundDirective } from './CustomDirective/set-backgound.directive
 import { HighlightsDirective } from './CustomDirective/highlights.directive';
 import { AppHoverDirective } from './CustomDirective/app-hover.directive';
 import { BgColorDirective } from './CustomDirective/bg-color.directive';
+import { DisableButtonDirective } from './CustomDirective/disable-button.directive';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { BgColorDirective } from './CustomDirective/bg-color.directive';
     SetBackgoundDirective,
     HighlightsDirective,
     AppHoverDirective,
-    BgColorDirective
+    BgColorDirective,
+    DisableButtonDirective
   ],
   imports: [
     BrowserModule,
