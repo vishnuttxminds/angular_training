@@ -62,7 +62,7 @@
 <!-- <div>
   <app-chat></app-chat>
 </div>   -->
-
+<!-- 
 <h1>Product List</h1>
 
 
@@ -95,4 +95,11 @@
 />
 <div *ngIf="passwordMessage" class="alert alert-warning mt-2">
   {{ passwordMessage }}
+</div> -->
+
+
+<div *ngFor="let p of products" [appHighlightStyle]="!p.instock" class="product-box">
+  <h3>{{ p.name }}</h3>
+  <p>Price: ₹{{ p.price }}</p>
+  <p *ngIf="!p.instock" class="text-danger">Out of Stock</p>
 </div>

@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { ButtonChildComponent } from './button-child/button-child.component';
 import { ViewChildrenChildComponent } from './view-children-parent/view-children-child/view-children-child.component';
+import { Products } from './models/products.model';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,15 @@ import { ViewChildrenChildComponent } from './view-children-parent/view-children
 export class AppComponent {
   title = 'my-angular-project';
   passwordMessage: string = '';
+
+  products : Products[] = [
+  { name: 'Laptop', price: 45000, instock: true },
+  { name: 'Mouse', price: 500, instock: false },
+  { name: 'Keyboard', price: 1200, instock: true },
+  { name: 'Monitor', price: 8000, instock: false }
+];
+
+
   @ViewChild(ButtonChildComponent) child!: ButtonChildComponent;
 
   callChildMethod() {
