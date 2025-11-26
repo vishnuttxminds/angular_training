@@ -34,6 +34,7 @@ import { HighlightsDirective } from './CustomDirective/highlights.directive';
 import { AppHoverDirective } from './CustomDirective/app-hover.directive';
 import { BgColorDirective } from './CustomDirective/bg-color.directive';
 import { DisableButtonDirective } from './CustomDirective/disable-button.directive';
+import { PasswordDirective } from './CustomDirective/password.directive';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { DisableButtonDirective } from './CustomDirective/disable-button.directi
     HighlightsDirective,
     AppHoverDirective,
     BgColorDirective,
-    DisableButtonDirective
+    DisableButtonDirective,
+    PasswordDirective
   ],
   imports: [
     BrowserModule,

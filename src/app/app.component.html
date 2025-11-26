@@ -84,3 +84,15 @@
 <button appDisableButton type="submit">
   Disable Button
 </button>
+
+<br>
+<br>
+<input
+  type="password"
+  placeholder="Enter password"
+  (strengthChanged)="onStrengthChange($event)"
+  appPassword
+/>
+<div *ngIf="passwordMessage" class="alert alert-warning mt-2">
+  {{ passwordMessage }}
+</div>
