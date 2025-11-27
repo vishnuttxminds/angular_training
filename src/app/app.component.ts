@@ -18,13 +18,14 @@ export class AppComponent {
   title = 'my-angular-project';
   passwordMessage: string = '';
 
-  products : Products[] = [
-  { name: 'Laptop', price: 45000, instock: true },
-  { name: 'Mouse', price: 500, instock: false },
-  { name: 'Keyboard', price: 1200, instock: true },
-  { name: 'Monitor', price: 8000, instock: false }
-];
+   showMessage: boolean = true;
 
+  products: Products[] = [
+    { name: 'Laptop', price: 45000, instock: true },
+    { name: 'Mouse', price: 500, instock: false },
+    { name: 'Keyboard', price: 1200, instock: true },
+    { name: 'Monitor', price: 8000, instock: false },
+  ];
 
   @ViewChild(ButtonChildComponent) child!: ButtonChildComponent;
 

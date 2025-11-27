@@ -26,7 +26,6 @@
   <app-emplyee-array></app-emplyee-array>
 </div> -->
 
-
 <!-- <app-button-child></app-button-child>
 <br>
 <br>
@@ -34,7 +33,6 @@
 <br>
 <br>
 <button (click)="onParentButtonClick()">Change Child Button Color</button> -->
-
 
 <!-- <div>
   <app-view-children-child></app-view-children-child>
@@ -53,7 +51,6 @@
 <!-- <div>
   <app-view-children-parent1></app-view-children-parent1>
 </div> -->
-
 
 <!-- <div>
   <app-book-serach></app-book-serach>
@@ -97,9 +94,17 @@
   {{ passwordMessage }}
 </div> -->
 
-
-<div *ngFor="let p of products" [appHighlightStyle]="!p.instock" class="product-box">
+<!-- <div
+  appHighlightStyle
+  *ngFor="let p of products"
+  [appHighlightStyles]="!p.instock"
+  class="product-box"
+  [comStyle]="'2px solid red'"
+>
   <h3>{{ p.name }}</h3>
   <p>Price: ₹{{ p.price }}</p>
-  <p *ngIf="!p.instock" class="text-danger">Out of Stock</p>
+</div> -->
+
+<div *appIf="showMessage">
+  This message appears only when showMessage is TRUE.
 </div>

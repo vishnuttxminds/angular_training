@@ -36,6 +36,7 @@ import { BgColorDirective } from './CustomDirective/bg-color.directive';
 import { DisableButtonDirective } from './CustomDirective/disable-button.directive';
 import { PasswordDirective } from './CustomDirective/password.directive';
 import { HighlightStyleDirective } from './CustomDirective/highlight-style.directive';
+import { IfDirective } from './CustomDirective/if.directive';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { HighlightStyleDirective } from './CustomDirective/highlight-style.direc
     BgColorDirective,
     DisableButtonDirective,
     PasswordDirective,
-    HighlightStyleDirective
+    HighlightStyleDirective,
+    IfDirective
   ],
   imports: [
     BrowserModule,

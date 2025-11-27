@@ -4,7 +4,8 @@ import { Directive, HostBinding, Input, OnChanges } from '@angular/core';
   selector: '[appHighlightStyle]',
 })
 export class HighlightStyleDirective implements OnChanges {
-  @Input() appHighlightStyle: boolean = false;
+  @Input() appHighlightStyles: boolean = false;
+  @Input() comStyle :string = "";
 
   constructor() {}
 
@@ -12,6 +13,6 @@ export class HighlightStyleDirective implements OnChanges {
   border: string = '';
 
   ngOnChanges() {
-    this.border = this.appHighlightStyle ? '2px solid red' : '';
+    this.border = this.appHighlightStyles ? this.comStyle : '';
   }
 }
