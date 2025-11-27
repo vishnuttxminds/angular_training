@@ -10,6 +10,7 @@ import { ViewChildrenChildComponent } from './view-children-parent/view-children
 import { Products } from './models/products.model';
 import { MyServiceService } from './services/my-service.service';
 import { BookSearchService } from './services/book-search/book-search.service';
+import { Books } from './models/books.mode';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,7 @@ export class AppComponent {
   showMessage: boolean = true;
 
   inputQuery = '';
-  results: string[] = [];
+ results: Books[] = [];
 
   products: Products[] = [
     { name: 'Laptop', price: 45000, instock: true },

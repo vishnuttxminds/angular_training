@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BookSearchApiService } from './book-search-api.service';
 import { BookSearchCacheServiceService } from './book-search-cache-service.service';
+import { Books } from 'src/app/models/books.mode';
 
 @Injectable({
   providedIn: 'root'
@@ -11,14 +12,19 @@ export class BookSearchService {
     private cache: BookSearchCacheServiceService
   ) {}
 
-  search(inputQuery: string): string[] {
-    const cachedResult = this.cache.get(inputQuery);
-    if (cachedResult) {
+  search(query: string): Books[] {
+    // 1. Check cache
+    const cached = this.cache.get(query);
+    if (cached) {
       console.log('Returning from Cache');
-      return cachedResult;
+      return cached;
     }
-    const result = this.api.search(inputQuery);
-    this.cache.set(inputQuery, result);
+
+    // 2. API search
+    const result = this.api.search(query);
+
+    // 3. Store in cache
+    this.cache.set(query, result);
 
     console.log('Returning from API');
     return result;

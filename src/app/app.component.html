@@ -123,6 +123,6 @@
  <input [(ngModel)]="inputQuery" placeholder="Search book"/>
     <button (click)="onSearch()">Search</button>
 
-    <div *ngFor="let book of results">
-      {{ book }}
-    </div>
+   <div *ngFor="let book of results">
+   {{ book.name }}
+</div>
