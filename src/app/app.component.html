@@ -105,6 +105,24 @@
   <p>Price: ₹{{ p.price }}</p>
 </div> -->
 
-<div *appIf="showMessage">
+<!-- <div *appIf="showMessage">
   This message appears only when showMessage is TRUE.
 </div>
+
+
+<div>
+  <h2>Data:</h2>
+  <ul>
+    <li *ngFor="let items of data">{{items}}</li>
+  </ul>
+  <input [(ngModel)]="newItem" placeholder="New item...">
+  <button (click)="addItem()">Add</button>
+</div> -->
+
+
+ <input [(ngModel)]="inputQuery" placeholder="Search book"/>
+    <button (click)="onSearch()">Search</button>
+
+    <div *ngFor="let book of results">
+      {{ book }}
+    </div>

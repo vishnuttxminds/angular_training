@@ -8,6 +8,8 @@ import {
 import { ButtonChildComponent } from './button-child/button-child.component';
 import { ViewChildrenChildComponent } from './view-children-parent/view-children-child/view-children-child.component';
 import { Products } from './models/products.model';
+import { MyServiceService } from './services/my-service.service';
+import { BookSearchService } from './services/book-search/book-search.service';
 
 @Component({
   selector: 'app-root',
@@ -17,8 +19,10 @@ import { Products } from './models/products.model';
 export class AppComponent {
   title = 'my-angular-project';
   passwordMessage: string = '';
+  showMessage: boolean = true;
 
-   showMessage: boolean = true;
+  inputQuery = '';
+  results: string[] = [];
 
   products: Products[] = [
     { name: 'Laptop', price: 45000, instock: true },
@@ -26,6 +30,20 @@ export class AppComponent {
     { name: 'Keyboard', price: 1200, instock: true },
     { name: 'Monitor', price: 8000, instock: false },
   ];
+  data: string[];
+  newItem: string = '';
+
+  constructor(
+    private myservice: MyServiceService,
+    private searchService: BookSearchService
+  ) {
+    this.data = myservice.getData();
+  }
+
+  addItem() {
+    this.myservice.addData(this.newItem);
+    this.newItem = '';
+  }
 
   @ViewChild(ButtonChildComponent) child!: ButtonChildComponent;
 
@@ -46,5 +64,9 @@ export class AppComponent {
 
   onStrengthChange(msg: string) {
     this.passwordMessage = msg;
+  }
+
+  onSearch() {
+    this.results = this.searchService.search(this.inputQuery);
   }
 }
