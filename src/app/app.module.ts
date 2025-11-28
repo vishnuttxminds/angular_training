@@ -37,6 +37,7 @@ import { DisableButtonDirective } from './CustomDirective/disable-button.directi
 import { PasswordDirective } from './CustomDirective/password.directive';
 import { HighlightStyleDirective } from './CustomDirective/highlight-style.directive';
 import { IfDirective } from './CustomDirective/if.directive';
+import { ObserverComponent } from './observer/observer.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { IfDirective } from './CustomDirective/if.directive';
     DisableButtonDirective,
     PasswordDirective,
     HighlightStyleDirective,
-    IfDirective
+    IfDirective,
+    ObserverComponent
   ],
   imports: [
     BrowserModule,
