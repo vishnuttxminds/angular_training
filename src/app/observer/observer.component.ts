@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import {
+  combineLatest,
   concat,
+  concatMap,
   debounceTime,
   filter,
   from,
@@ -10,9 +12,16 @@ import {
   merge,
   Observable,
   of,
+  reduce,
+  retry,
+  skip,
+  switchMap,
   take,
+  takeUntil,
   tap,
+  timer,
 } from 'rxjs';
+import { ajax } from 'rxjs/ajax';
 
 @Component({
   selector: 'app-observer',
@@ -37,8 +46,38 @@ export class ObserverComponent implements OnInit, AfterViewInit {
   //   debounceTime(1300)
   // );
 
-   numbersOf = of(1, 2, 3, 4, 5);
-   evenNumbers = this.numbersOf.pipe(filter(num => num % 2 === 0));
+  source5 = interval(1000);
+  source6 = interval(500);
+
+  source7 = interval(1000);
+  example = this.source7.pipe(skip(3));
+
+  source8 = interval(1000);
+  timer$ = timer(5000);
+
+  examplePipe = this.source8.pipe(takeUntil(this.timer$));
+
+  first = timer(1000, 2000);
+  second = timer(2000, 2000);
+  combined = combineLatest([this.first, this.second]);
+
+  merged2 = merge(this.source5, this.source6);
+
+  numbersOf = of(1, 2, 3, 4, 5);
+  evenNumbers = this.numbersOf.pipe(filter((num) => num % 2 === 0));
+
+  numbersForSum = of(1, 2, 3, 4, 5);
+  sum = this.numbersForSum.pipe(reduce((acc, value) => acc + value, 0));
+
+  request = ajax('https://www.google.com/');
+  retryRequest = this.request.pipe(retry(3));
+
+  clicks = fromEvent(document, 'click');
+  resultClick = this.clicks.pipe(concatMap(() => interval(1000).pipe(take(3))));
+
+  resultClickMap = this.clicks.pipe(
+    switchMap(() => interval(1000).pipe(take(3)))
+  );
 
   concatenated = concat(this.source1, this.source2);
 
@@ -85,6 +124,31 @@ export class ObserverComponent implements OnInit, AfterViewInit {
     //   this.keyup.subscribe((result) => console.log('keyup > ', result));
     // }, 13000);
 
-    this.evenNumbers.subscribe(result => console.log('evenNumbers > ', result));
+    // this.evenNumbers.subscribe((result) =>
+    //   console.log('evenNumbers > ', result)
+    // );
+
+    // this.sum.subscribe((result) => console.log('sum > ', result));
+
+    // this.merged2.subscribe(result => console.log('merged2 > ', result));
+    
+    // this.resultClick.subscribe((result) =>
+    //   console.log('resultClick > ', result)
+    // );
+
+    // this.resultClickMap.subscribe((result) =>
+    //   console.log('resultClick > ', result)
+    // );
+
+    // this.combined.subscribe((value) => console.log('combined > ', value));
+
+    // this.example.subscribe((value) => console.log('example > ', value));
+
+    this.examplePipe.subscribe(value => console.log('examplePipe > ', value));
+
+    // this.retryRequest.subscribe(
+    //   (result) => console.log(result),
+    //   (error) => console.error('Retried 3 times, but still failed.', JSON.stringify(error))
+    // );
   }
 }
