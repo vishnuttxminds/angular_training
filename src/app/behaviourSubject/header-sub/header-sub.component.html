@@ -1,0 +1,6 @@
+<p>header-sub works!</p>
+<h3>Total Employees: {{ count$ | async }}</h3>
+
+<div *ngIf="lastAdded$ | async as emp">
+  Last Added: {{ emp.name }}
+</div>

@@ -1,0 +1,8 @@
+<p>employee-form-sub2 works!</p>
+
+<form #f="ngForm" (ngSubmit)="addEmployee(f)">
+  <input name="name" ngModel placeholder="Name" required>
+  <input name="department" ngModel placeholder="Department" required>
+
+  <button [disabled]="f.invalid">Add Employee</button>
+</form>

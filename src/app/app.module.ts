@@ -44,6 +44,9 @@ import { CreatetaskComponent } from './subjects/createtask/createtask.component'
 import { HeaderComponent } from './employeeSubject/header/header.component';
 import { EmployeeFormComponent } from './employeeSubject/employee-form/employee-form.component';
 import { EmployeeListSubComponent } from './employeeSubject/employee-list-sub/employee-list-sub.component';
+import { HeaderSubComponent } from './behaviourSubject/header-sub/header-sub.component';
+import { EmployeeFormSub2Component } from './behaviourSubject/employee-form-sub2/employee-form-sub2.component';
+import { EmployeeListSub2Component } from './behaviourSubject/employee-list-sub2/employee-list-sub2.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +90,10 @@ import { EmployeeListSubComponent } from './employeeSubject/employee-list-sub/em
     CreatetaskComponent,
     HeaderComponent,
     EmployeeFormComponent,
-    EmployeeListSubComponent
+    EmployeeListSubComponent,
+    HeaderSubComponent,
+    EmployeeFormSub2Component,
+    EmployeeListSub2Component
   ],
   imports: [
     BrowserModule,
