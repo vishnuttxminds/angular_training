@@ -1,0 +1,19 @@
+<p>employee-list-sub works!</p>
+
+
+<!-- employee-list.component.html -->
+<section class="employee-list">
+  <h4>Employees</h4>
+
+  <div *ngIf="employees && employees.length; else noEmployees">
+    <ul>
+      <li *ngFor="let e of employees">
+        <strong>{{ e.name }}</strong> — {{ e.department }}
+      </li>
+    </ul>
+  </div>
+
+  <ng-template #noEmployees>
+    <p>No employees yet. Add one from the form.</p>
+  </ng-template>
+</section>

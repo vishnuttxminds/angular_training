@@ -38,6 +38,12 @@ import { PasswordDirective } from './CustomDirective/password.directive';
 import { HighlightStyleDirective } from './CustomDirective/highlight-style.directive';
 import { IfDirective } from './CustomDirective/if.directive';
 import { ObserverComponent } from './observer/observer.component';
+import { RxjsmapComponent } from './rxjsmap/rxjsmap.component';
+import { NewtaskComponent } from './subjects/newtask/newtask.component';
+import { CreatetaskComponent } from './subjects/createtask/createtask.component';
+import { HeaderComponent } from './employeeSubject/header/header.component';
+import { EmployeeFormComponent } from './employeeSubject/employee-form/employee-form.component';
+import { EmployeeListSubComponent } from './employeeSubject/employee-list-sub/employee-list-sub.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +81,13 @@ import { ObserverComponent } from './observer/observer.component';
     PasswordDirective,
     HighlightStyleDirective,
     IfDirective,
-    ObserverComponent
+    ObserverComponent,
+    RxjsmapComponent,
+    NewtaskComponent,
+    CreatetaskComponent,
+    HeaderComponent,
+    EmployeeFormComponent,
+    EmployeeListSubComponent
   ],
   imports: [
     BrowserModule,

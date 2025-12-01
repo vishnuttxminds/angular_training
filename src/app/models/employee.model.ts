@@ -11,3 +11,9 @@ export interface Books {
   name: string;
 }
 
+export interface EmployeeSub {
+  id: number;
+  name: string;
+  department: string;
+}
+
