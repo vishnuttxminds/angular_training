@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { EmployeeSub } from 'src/app/models/employee.model';
 import { EmployeeBehaveService } from 'src/app/services/employee-behave.service';
 
 @Component({
@@ -7,7 +9,9 @@ import { EmployeeBehaveService } from 'src/app/services/employee-behave.service'
   styleUrls: ['./employee-list-sub2.component.css'],
 })
 export class EmployeeListSub2Component {
-  employees$ = this.empService.employeeList$;
+  employees$: Observable<EmployeeSub[]>;
 
-  constructor(private empService: EmployeeBehaveService) {}
+  constructor(private empService: EmployeeBehaveService) {
+    this.employees$ = this.empService.employeeList$;
+  }
 }

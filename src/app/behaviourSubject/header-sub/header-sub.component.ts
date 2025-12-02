@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { EmployeeSub } from 'src/app/models/employee.model';
 import { EmployeeBehaveService } from 'src/app/services/employee-behave.service';
 
 @Component({
@@ -7,8 +9,11 @@ import { EmployeeBehaveService } from 'src/app/services/employee-behave.service'
   styleUrls: ['./header-sub.component.css'],
 })
 export class HeaderSubComponent {
-  constructor(private empService: EmployeeBehaveService) {}
+  count$!: Observable<number>;
+  lastAdded$!: Observable<EmployeeSub | null>;
 
-  count$ = this.empService.employeeCount$;
-  lastAdded$ = this.empService.lastAddedEmployee$;
+  constructor(private empService: EmployeeBehaveService) {
+    this.count$ = this.empService.employeeCount$;
+    this.lastAdded$ = this.empService.lastAddedEmployee$;
+  }
 }
